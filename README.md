@@ -1,7 +1,7 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?lines=Hellooo!👾)](https://git.io/typing-svg)
 
 Are you ready to code today? 🤔
-- [x] YESSS!
+- [x] YESSS !
 - [ ] no :(
 
 <!--
