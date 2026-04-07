@@ -1,4 +1,4 @@
-## Hi there 👋
+[![Typing SVG](https://readme-typing-svg.demolab.com?lines=Bonjour+et+bienvenue+!;Hellooo+!)](https://git.io/typing-svg)
 
 <!--
 **nampoinafandresena/nampoinafandresena** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
