@@ -4,6 +4,8 @@ Are you ready to code today? 🤔
 - [x] YESSS! 😋
 - [ ] no :(
 
+<img src="./github-metrics.svg" alt="Statistiques GitHub" width="100%" />
+
 <!--
 **nampoinafandresena/nampoinafandresena** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
