@@ -1,11 +1,8 @@
 name: Metrics
 on:
-  # Programme une mise à jour quotidienne
   schedule:
     - cron: "0 0 * * *"
-  # Permet un déclenchement manuel depuis l'onglet Actions
   workflow_dispatch:
-  # Se déclenche à chaque push sur la branche principale
   push:
     branches:
       - main
@@ -18,17 +15,36 @@ jobs:
     steps:
       - uses: lowlighter/metrics@latest
         with:
-          # Votre token personnel
           token: ${{ secrets.METRICS_TOKEN }}
-          # Le token GitHub généré automatiquement, pour permettre le commit
           committer_token: ${{ secrets.GITHUB_TOKEN }}
-          # Options de base
           user: nampoinafandresena
+          
+          # 🎨 OPTIONS DE STYLE
           template: classic
           base: header, activity, community, repositories, metadata
           filename: github-metrics.svg
+          
+          # 🖌️ PERSONNALISATION VISUELLE
+          config_display: compact              # ou "large" pour plus d'espace
           config_timezone: Europe/Paris
-          # Active quelques plugins utiles
+          config_twemoji: yes                  # Émojis plus jolis
+          config_octicon: yes                  # Icônes GitHub
+          
+          # 📊 PLUGINS POPULAIRES
           plugin_languages: yes
+          plugin_languages_details: percentage # Affiche les pourcentages
+          plugin_languages_skipped: node_modules, vendor
+          
+          plugin_habits: yes
+          plugin_habits_days: 14
+          plugin_habits_facts: yes
+          plugin_habits_charts: yes
+          
+          plugin_achievements: yes
+          plugin_achievements_threshold: B     # Affiche les succès
+          
           plugin_stars: yes
+          plugin_stars_count: 4
+          
           plugin_followup: yes
+          plugin_followup_sections: repositories
