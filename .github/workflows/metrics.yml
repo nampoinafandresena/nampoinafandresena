@@ -1,0 +1,34 @@
+name: Metrics
+on:
+  # Programme une mise à jour quotidienne
+  schedule:
+    - cron: "0 0 * * *"
+  # Permet un déclenchement manuel depuis l'onglet Actions
+  workflow_dispatch:
+  # Se déclenche à chaque push sur la branche principale
+  push:
+    branches:
+      - main
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: lowlighter/metrics@latest
+        with:
+          # Votre token personnel
+          token: ${{ secrets.METRICS_TOKEN }}
+          # Le token GitHub généré automatiquement, pour permettre le commit
+          committer_token: ${{ secrets.GITHUB_TOKEN }}
+          # Options de base
+          user: nampoinafandresena
+          template: classic
+          base: header, activity, community, repositories, metadata
+          filename: github-metrics.svg
+          config_timezone: Europe/Paris
+          # Active quelques plugins utiles
+          plugin_languages: yes
+          plugin_stars: yes
+          plugin_followup: yes
